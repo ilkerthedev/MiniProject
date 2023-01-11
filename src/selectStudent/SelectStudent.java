@@ -1,3 +1,5 @@
+package selectStudent;
+
 import java.util.Scanner;
 
 /*
