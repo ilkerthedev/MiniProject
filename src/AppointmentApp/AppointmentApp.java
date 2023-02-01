@@ -32,9 +32,11 @@ public class AppointmentApp {
         start();
     }
     //1-ana menü oluştur.
-    //2-doctor, appointment classlarini olustur.
+    //2-doctor, appointment classlarını oluştur
     public static void start(){
         Scanner inp=new Scanner(System.in);
+        AppointmentService appointmentService=new AppointmentService();
+        DoctorService doctorService=new DoctorService();
         System.out.println("Merhaba, randevu sistemine hoşgeldiniz...");
         int select;
         do {
@@ -45,10 +47,10 @@ public class AppointmentApp {
             select=inp.nextInt();
             switch (select){
                 case 1:
-                    //randevu oluşturma
+                    appointmentService.getAppointment(doctorService);
                     break;
                 case 2:
-                    //randevuyu yazdır
+                    appointmentService.printApp();
                     break;
                 case 0:
                     System.out.println("İyi günler dileriz...");
